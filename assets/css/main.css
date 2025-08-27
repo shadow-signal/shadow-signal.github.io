@@ -8,73 +8,23 @@ a{color:#b6d3ff;text-decoration:none} a:hover{text-decoration:underline}
 .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);overflow:hidden;height:1px;width:1px;padding:0;border:0}
 
 .site-header{position:relative}
-/* HERO BANNER */
-.hero-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 72vh;
-  max-height: 72vh;
-  overflow: hidden;
-}
-.hero-slideshow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.hero-slide {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* show full frame */
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.hero-slide.active {
-  opacity: 1;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;     /* vertical center text */
-  justify-content: flex-start;
-  padding-left: 5vw;
-}
-.hero-text {
-  color: #fff;
-  max-width: 70%;
-}
-.hero-title {
-  font-family: 'Oswald', sans-serif;
-}
-.hero-tagline {
-  font-family: 'Roboto Condensed', sans-serif;
-}
+.hero{position:relative;min-height:48vh;max-height:72vh;overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 900ms ease}
+.hero-slide.is-active{opacity:1}
+.hero-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,9,10,0.75) 0%,rgba(8,9,10,0.25) 45%,rgba(8,9,10,0.0) 70%);pointer-events:none}
+.hero-text{position:relative;z-index:2;display:flex;align-items:center;height:100%}
+.hero-text .tagline{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;font-size:clamp(1.4rem,2.6vw,2.2rem);max-width:600px;margin:0 0 0 5vw}
 
-/* WEATHER BACKGROUND STATES */
-.weather-surface.weather-clear {
-  background: repeating-linear-gradient(45deg, #ffeb99 0, #fff7cc 10px);
-}
-.weather-surface.weather-cloudy {
-  background: repeating-linear-gradient(45deg, #555 0, #333 10px);
-}
-.weather-surface.weather-rain {
-  background: repeating-linear-gradient(45deg, #6699cc 0, #336699 10px);
-}
-.weather-surface.weather-snow {
-  background: repeating-linear-gradient(45deg, #e6f0ff 0, #ffffff 10px);
-}
+.site-content{padding:6vh 5vw}
+.weather-surface{transition:background 600ms ease,background-color 600ms ease}
+
+/* Weather-reactive stripes */
+.weather-clear{background:repeating-linear-gradient(135deg,#121418,#121418 24px,#0f1115 24px,#0f1115 48px)}
+.weather-cloudy{background:repeating-linear-gradient(135deg,#16181d,#16181d 24px,#111318 24px,#111318 48px)}
+.weather-rain{background:repeating-linear-gradient(135deg,#0f141a,#0f141a 24px,#0c1117 24px,#0c1117 48px)}
+.weather-snow{background:repeating-linear-gradient(135deg,#13161b,#13161b 24px,#0e1116 24px,#0e1116 48px)}
 
 /* Cards: manila file folders */
 .cards{display:flex;flex-direction:column;gap:5vh}
