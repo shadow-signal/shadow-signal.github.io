@@ -13,9 +13,9 @@
   function next(){
     const current = slides[i];
     i = (i + 1) % slides.length;
-    const nxt = slides[i];
+    const next = slides[i];
     current.classList.remove('is-active');
-    nxt.classList.add('is-active');
+    next.classList.add('is-active');
 
     tick++;
     if (tick % flashEvery === 0) {
@@ -23,6 +23,7 @@
       setTimeout(()=> flash.style.opacity = '0', 120);
     }
   }
+  // Ensure first is visible
   slides[0]?.classList.add('is-active');
   setInterval(next, interval);
 })();
