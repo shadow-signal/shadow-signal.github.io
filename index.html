@@ -1,0 +1,20 @@
+---
+layout: default
+title: SHADOW SIGNAL
+---
+
+<div class="cards">
+  {% for post in paginator.posts %}
+    {% include post_card.html post=post %}
+    {% unless forloop.last %}{% include emoji-separator.html %}{% endunless %}
+  {% endfor %}
+</div>
+
+<nav class="pager">
+  {% if paginator.previous_page %}
+    <a class="pager-link" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pager-link" href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+  {% endif %}
+</nav>
