@@ -1,7 +1,9 @@
 title: "SHADOW SIGNAL"
 description: "Where thoughts grow heavy and burdens lift easier..."
+# Set these two based on your repo choice:
 url: "https://shadowsignal.github.io"
-baseurl: ""  # keep empty for a user site repo
+baseurl: "" # if repo is shadowsignal.github.io
+# baseurl: "/shadowsignal.io" # if repo is shadowsignal.io
 
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
@@ -13,12 +15,12 @@ plugins:
 paginate: 5
 paginate_path: "/page:num/"
 
-excerpt_separator: "<!-- more -->"
-
+# Expose minimal data for tags page
 collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:title/
 
+# Build settings
 exclude:
   - README.md
