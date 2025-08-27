@@ -1,0 +1,24 @@
+title: "SHADOW SIGNAL"
+description: "Where thoughts grow heavy and burdens lift easier..."
+url: "https://shadowsignal.github.io"
+baseurl: ""  # keep empty for a user site repo
+
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+theme: null
+
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num/"
+
+excerpt_separator: "<!-- more -->"
+
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+exclude:
+  - README.md
