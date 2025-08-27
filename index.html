@@ -5,16 +5,16 @@ title: SHADOW SIGNAL
 
 <div class="cards">
   {% for post in paginator.posts %}
+    {% include emoji-separator.html %}
     {% include post_card.html post=post %}
-    {% unless forloop.last %}{% include emoji-separator.html %}{% endunless %}
   {% endfor %}
 </div>
 
 <nav class="pager">
   {% if paginator.previous_page %}
-    <a class="pager-link" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+    <a class="pager-link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&larr; Newer</a>
   {% endif %}
   {% if paginator.next_page %}
-    <a class="pager-link" href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+    <a class="pager-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older &rarr;</a>
   {% endif %}
 </nav>
