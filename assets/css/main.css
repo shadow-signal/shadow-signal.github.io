@@ -56,12 +56,10 @@ a{color:#b6d3ff;text-decoration:none} a:hover{text-decoration:underline}
   max-width: 70%;
 }
 .hero-title {
-  font-size: 3rem;
-  margin: 0 0 0.5rem 0;
+  font-family: 'Oswald', sans-serif;
 }
 .hero-tagline {
-  font-size: 1.4rem;
-  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* WEATHER BACKGROUND STATES */
