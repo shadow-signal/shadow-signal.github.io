@@ -33,20 +33,8 @@ a:hover{text-decoration:underline}
 }
 
 .site-content{padding:6vh 5vw}
-.weather-surface{transition:background 600ms ease, background-color 600ms ease}
-
-/* Weather-reactive stripes (subtle) */
-.weather-clear { background:
-  repeating-linear-gradient(135deg, var(--muted-ink), var(--muted-ink) 24px, #111318 24px, #111318 48px);
-}
-.weather-cloudy { background:
-  repeating-linear-gradient(135deg, #121418, #121418 24px, #0f1115 24px, #0f1115 48px);
-}
-.weather-rain { background:
-  repeating-linear-gradient(135deg, #0f141a, #0f141a 24px, #0c1117 24px, #0c1117 48px);
-}
-.weather-snow { background:
-  repeating-linear-gradient(135deg, #13161b, #13161b 24px, #0e1116 24px, #0e1116 48px);
+.weather-surface {
+  background: repeating-linear-gradient(45deg, #555 0, #333 10px);
 }
 
 /* Card: manila file folder aesthetic */
