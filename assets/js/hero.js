@@ -1,28 +1,20 @@
-(function(){
-  const root = document.querySelector('.hero-slides');
-  if(!root) return;
-  const slides = Array.from(root.querySelectorAll('.hero-slide'));
-  const flash = root.querySelector('.hero-flash');
-  const interval = parseInt(root.dataset.interval || '5000', 10);
-  const flashEvery = parseInt(root.dataset.flashInterval || '3', 10);
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.hero-slide');
+  let index = 0;
 
-  // Preload remaining images
-  slides.slice(1).forEach(img => { const i = new Image(); i.src = img.src; });
-
-  let i = 0, tick = 0;
-  function next(){
-    const current = slides[i];
-    i = (i + 1) % slides.length;
-    const nxt = slides[i];
-    current.classList.remove('is-active');
-    nxt.classList.add('is-active');
-
-    tick++;
-    if (tick % flashEvery === 0) {
-      flash.style.opacity = '1';
-      setTimeout(()=> flash.style.opacity = '0', 120);
-    }
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === i);
+    });
   }
-  slides[0]?.classList.add('is-active');
-  setInterval(next, interval);
-})();
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }
+
+  if (slides.length) {
+    showSlide(index);
+    setInterval(nextSlide, 5000); // 5s per slide
+  }
+});
