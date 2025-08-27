@@ -1,9 +1,8 @@
 title: "SHADOW SIGNAL"
 description: "Where thoughts grow heavy and burdens lift easier..."
 url: "https://shadowsignal.github.io"
-baseurl: ""  # keep empty for a user site repo
+baseurl: ""
 
-permalink: /:year/:month/:day/:title/
 markdown: kramdown
 theme: null
 
