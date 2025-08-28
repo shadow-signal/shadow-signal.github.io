@@ -197,8 +197,10 @@ body {
   background: url('/assets/images/paper_texture.png') center/cover no-repeat;
   padding: 2rem;
   max-width: 700px;
-  height: 800px; /* tweak to your liking */
+  height: 800px; /* visible area; will scroll inside */
   overflow-y: auto;
   margin: 1rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: 'Homemade Apple', cursive;
+  line-height: 1.6;
 }
