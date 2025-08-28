@@ -1,6 +1,7 @@
 ---
 ---
 
+/* 🌲 Mahogany Background */
 body {
   margin: 0;
   background: url('/assets/images/bg_desktop_mahogany.jpg') center/cover fixed;
@@ -8,6 +9,7 @@ body {
   color: #222;
 }
 
+/* 📁 Folder Grid on Index Page */
 .folder-grid {
   display: grid;
   gap: 2rem;
@@ -22,6 +24,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .folder-tab {
@@ -47,8 +50,105 @@ body {
   right: 50px;
   font-family: 'Homemade Apple', cursive;
   font-size: 1.5rem;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 
+/* 🧭 Pagination */
+.pagination {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pagination a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #444;
+}
+
+/* 🗂 Post Layout */
+.post-container {
+  padding: 2rem;
+}
+
+.post-folder {
+  position: relative;
+  background: url('/assets/images/folder_note_clip.png') center/cover no-repeat;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.folder-tab {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  width: 150px;
+}
+
+.post-title {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 2rem;
+  margin-top: 160px;
+  margin-bottom: 1rem;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* 📎 Ephemera Area */
+.ephemera img {
+  width: 300px;
+  transform: rotate(-2deg);
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ✍️ First Paragraph / Lede */
+.post-lede {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: 'Homemade Apple', cursive;
+  color: #333;
+}
+
+/* 🏷 Tags + Mood */
+.post-tags {
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.post-mood {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* 📺 YouTube Embed */
+.youtube-frame {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.youtube-frame iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* 🔙 Back to Main Page Tab */
 .back-link {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -62,6 +162,7 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 1rem;
 }
 
 .back-link.orange {
@@ -80,15 +181,4 @@ body {
 .back-link:hover {
   transform: translateX(-4px);
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.pagination {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.pagination a {
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
 }
