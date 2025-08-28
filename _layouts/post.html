@@ -8,8 +8,10 @@ layout: default
 {% endif %}
 
 <div class="post-container">
+  <!-- Back to Main Page Tab -->
   <a href="{{ '/' | relative_url }}" class="back-link {{ tab_color }}">← Back to Main Page</a>
 
+  <!-- Opened Folder Background -->
   <div class="post-folder">
     <img class="folder-tab" src="{{ '/assets/images/tab_' | append: tab_color | append: '.png' | relative_url }}" alt="Date tab">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -20,8 +22,9 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="post-lede">
-      {{ content | markdownify }}
+    <!-- Scrollable Paper Area -->
+    <div class="post-paper">
+      {{ content }}
     </div>
 
     {% if page.tags %}
