@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="folder-grid">
+  {% for post in site.posts %}
+    <div class="folder" style="background-image: url('/assets/images/folder_note_clip.png');">
+      <img class="folder-tab" src="/assets/images/tab_orange.png" alt="Date tab">
+      <span class="folder-date">{{ post.date | date: "%b %d" }}</span>
+      <a href="{{ post.url }}">
+        <h2 class="folder-title">{{ post.title }}</h2>
+      </a>
+    </div>
+  {% endfor %}
+</div>
