@@ -1,10 +1,69 @@
 ---
 ---
 
-@import "variables"; /* later for colors & fonts */
-
-/* Basic reset and body background */
 body {
+  margin: 0;
   background: url('/assets/images/bg_desktop_mahogany.jpg') center/cover fixed;
   font-family: sans-serif;
+  color: #222;
+}
+
+.folder-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 2rem;
+}
+
+.folder {
+  width: 800px;
+  height: 600px;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.folder-tab {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  width: 150px;
+}
+
+.folder-date {
+  position: absolute;
+  right: 15px;
+  top: 118px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.folder-title {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  right: 50px;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #b33;
+  font-weight: bold;
+}
+
+.pagination {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pagination a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
 }
