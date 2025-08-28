@@ -193,3 +193,12 @@ body {
   transform: translateX(-4px);
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
 }
+.post-paper {
+  background: url('/assets/images/paper_texture.png') center/cover no-repeat;
+  padding: 2rem;
+  max-width: 700px;
+  height: 800px;
+  overflow-y: auto;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
