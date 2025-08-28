@@ -10,9 +10,36 @@ layout: default
 <div class="post-container">
   <a href="{{ '/' | relative_url }}" class="back-link {{ tab_color }}">← Back to Main Page</a>
 
-  <article class="full-post">
-    <h1>{{ page.title }}</h1>
-    <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-    {{ content }}
-  </article>
+  <div class="post-folder">
+    <img class="folder-tab" src="{{ '/assets/images/tab_' | append: tab_color | append: '.png' | relative_url }}" alt="Date tab">
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    {% if page.ephemera %}
+      <div class="ephemera">
+        <img src="{{ page.ephemera | relative_url }}" alt="Ephemera" />
+      </div>
+    {% endif %}
+
+    <div class="post-lede">
+      {{ content | markdownify }}
+    </div>
+
+    {% if page.tags %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.mood %}
+      <div class="post-mood">Mood: <strong>{{ page.mood }}</strong></div>
+    {% endif %}
+
+    {% if page.youtube %}
+      <div class="youtube-frame">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+  </div>
 </div>
