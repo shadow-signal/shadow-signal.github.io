@@ -1,0 +1,8 @@
+title: "Java Joe's Version"
+description: "Digital cave of thought dumps"
+baseurl: ""
+url: ""  # set to your GitHub Pages URL later
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
