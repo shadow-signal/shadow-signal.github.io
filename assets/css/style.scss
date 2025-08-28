@@ -1,0 +1,10 @@
+---
+---
+
+@import "variables"; /* later for colors & fonts */
+
+/* Basic reset and body background */
+body {
+  background: url('/assets/images/bg_desktop_mahogany.jpg') center/cover fixed;
+  font-family: sans-serif;
+}
