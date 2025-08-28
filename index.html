@@ -2,22 +2,41 @@
 layout: default
 ---
 
-<div class="folder-grid">
-  {% assign tab_colors = "orange,green,blue,red" | split: "," %}
-{% for post in paginator.posts %}
-  {% assign color_index = forloop.index0 | modulo: tab_colors.size %}
-  {% assign tab_color = tab_colors[color_index] %}
-
-  <div class="folder" style="background-image: url('{{ '/assets/images/folder_note_clip.png' | relative_url }}');">
-    <img class="folder-tab" src="{{ '/assets/images/tab_' | append: tab_color | append: '.png' | relative_url }}" alt="Date tab">
-    <span class="folder-date">{{ post.date | date: "%b %d" }}</span>
-    <a href="{{ post.url | relative_url }}?tab_color={{ tab_color }}">
-      <h2 class="folder-title">{{ post.title }}</h2>
-    </a>
-  </div>
-{% endfor %}
+<!-- 🏆 Hero Banner -->
+<div class="hero-banner">
+  <h1>Jack's Version</h1>
+  <p>Digital Cave of Thought Dumps</p>
 </div>
 
+<div class="folder-grid">
+  {% assign tab_colors = "orange,green,blue,red" | split: "," %}
+  {% for post in paginator.posts %}
+    {% assign color_index = forloop.index0 | modulo: tab_colors.size %}
+    {% assign tab_color = tab_colors[color_index] %}
+
+    <div class="folder" style="background-image: url('{{ '/assets/images/folder_note_clip.png' | relative_url }}');">
+      <!-- Side Tab -->
+      <img class="folder-tab" src="{{ '/assets/images/tab_' | append: tab_color | append: '.png' | relative_url }}" alt="Date tab">
+
+      <!-- Vertical Date -->
+      <span class="folder-date-vertical">{{ post.date | date: "%b %d" }}</span>
+
+      <!-- Title on Note Area -->
+      <a href="{{ post.url | relative_url }}?tab_color={{ tab_color }}">
+        <h2 class="folder-title">{{ post.title }}</h2>
+      </a>
+
+      <!-- Optional YouTube Embed (Main Page Preview) -->
+      {% if post.youtube %}
+        <div class="youtube-frame-preview">
+          <iframe width="300" height="169" src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Pagination -->
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
